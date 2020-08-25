@@ -19,17 +19,7 @@ function draw() {
   background("purple");
 
   // Draw Background
-  push();
-  fill(0);
-  ellipse(200, 200, 200);
-  fill(225);
-  ellipse(200, 200, 125);
-  noStroke();
-  rect(0, 0, 4, 400);
-  rect(396, 0, 4, 400);
-  rect(0, 0, 400, 4);
-  rect(0, 396, 400, 4);
-  pop();
+  drawEightball();
 
   // Text
   textFont('Courier New');
@@ -61,32 +51,46 @@ function keyPressed() {
 
 }
 
+function drawEightball() {
+  push();
+  fill(0);
+  ellipse(200, 200, 200);
+  fill(225);
+  ellipse(200, 200, 125);
+  noStroke();
+  rect(0, 0, 4, 400);
+  rect(396, 0, 4, 400);
+  rect(0, 0, 400, 4);
+  rect(0, 396, 400, 4);
+  pop();
+}
+
 function randomize() {
   if (number === null) {
     answer = "Press S to Shake";
   } else if (number === 1) {
     answer = "That is true";
-    loc.x = 170;
+    loc.x = 177;
   } else if (number === 2) {
     answer = "That is false";
-    loc.x = 170;
+    loc.x = 176;
   } else if (number === 3) {
     answer = "Try again later";
-    loc.x = 165;
+    loc.x = 170;
   } else if (number === 4) {
     answer = "It is certain";
-    loc.x = 170;
+    loc.x = 178;
   } else if (number === 5) {
     answer = "Will never happen";
-    loc.x = 157;
+    loc.x = 164;
   } else if (number === 6) {
     answer = "Signs point to yes";
-    loc.x = 158;
+    loc.x = 163;
   } else if (number === 7) {
     answer = "Outlook not so good";
-    loc.x = 150;
+    loc.x = 160;
   } else if (number == 0) {
     answer = "Cannot predict";
-    loc.x = 165;
+    loc.x = 170;
   }
 }
