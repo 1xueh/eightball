@@ -6,7 +6,7 @@ let loc;
 
 function setup() {
   const cnv = createCanvas(400, 400);
-  cnv.position(displayWidth / 2 - 200, 150);
+  cnv.style("margin", "150px auto 0px auto");
   
   textAlign(CENTER);
 
